@@ -1,6 +1,6 @@
 # Image Segmentation Through Application of Pagerank Graph-Based Kmeans Clustering
 
-Applies graph-based k-means, which uses pagerank to choose the centroids of node clusters, and a custom distance assign nodes to a centroid, to segment images in k number of partitions.
+Applies graph-based k-means clustering, which uses pagerank to choose the centroids of node clusters, and a custom distance algorithm to assign nodes to a centroid, to segment images in k number of partitions.
 
 ## Method
 
@@ -10,7 +10,7 @@ First, Color-Node uses each unique color channel value as a node with directed e
 
 Second, Color-Edge uses each pixel in the image as a node with directed edges to every other node weighted to similarity by color channel vector distance. 
  
-The initial color spaces tested are RGB, hue from HSV, and ab from Lab.
+The initial color-spaces/channels tested are RGB, hue from HSV, and ab from Lab.
 
 In addition to the Dijkstra Algorithm to assign each node to one of the respective centroids, the Personalized Pagerank (RWR) Algorithm with each centroid as the target uses the bidirectional importance of each node to the centroid to achieve assignment.
 
